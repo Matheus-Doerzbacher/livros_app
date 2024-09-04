@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:livros_app/layers/data/datasources/livro_datasources/get_livro_by_id_datasource.dart';
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 
-class GetLivroByIdFirebaseDatasource implements GetLivroByIdDatasource {
+class GetLivroByIdFirebaseDatasourceImp implements GetLivroByIdDatasource {
   @override
   Future<Livro> call(String idLivro) async {
     try {

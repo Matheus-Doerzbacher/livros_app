@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:livros_app/layers/data/datasources/livro_datasources/create_livro_datasource.dart';
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 
-class CreateLivroFirebaseDatasource implements CreateLivroDatasource {
+class CreateLivroFirebaseDatasourceImp implements CreateLivroDatasource {
   @override
   Future<bool> call(Livro livro) async {
     try {
