@@ -7,6 +7,7 @@ enum StatusLeitura {
 }
 
 class Livro {
+  String? id;
   final String autor;
   final String titulo;
   final int paginas;
@@ -19,7 +20,8 @@ class Livro {
   final StatusLeitura status;
   final String urlImage;
 
-  const Livro({
+  Livro({
+    this.id,
     required this.autor,
     required this.titulo,
     required this.paginas,
