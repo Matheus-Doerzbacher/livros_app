@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:livros_app/core/inject/inject.dart';
+import 'package:livros_app/core/inject/_inject.dart';
 import 'package:livros_app/layers/presentation/ui/pages/categoria_page.dart';
 import 'firebase_options.dart';
 
