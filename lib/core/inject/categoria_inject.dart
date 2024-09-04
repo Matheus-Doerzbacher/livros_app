@@ -1,7 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/create_categoria_datasource.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/delete_categoria_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/create_categoria_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/create_categoria_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/delete_categoria_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/get_categorias_firebase_datasource_imp.dart';
