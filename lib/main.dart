@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:get_it/get_it.dart';
 import 'package:livros_app/core/inject/inject.dart';
 import 'package:livros_app/layers/presentation/ui/pages/livro_page.dart';
 import 'firebase_options.dart';
@@ -14,7 +13,7 @@ void main() async {
   );
 
   // Inicialize todos os módulos de injeção de dependências
-  initAllModules(GetIt.instance);
+  Inject.init();
 
   runApp(const MyApp());
 }

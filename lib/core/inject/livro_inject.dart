@@ -19,7 +19,7 @@ import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_l
 import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_livros_usecase_imp.dart';
 import 'package:livros_app/layers/presentation/controllers/livro_controller.dart';
 
-void initLivroModule(GetIt getIt) {
+void livroInject(GetIt getIt) {
   //datasources
   getIt.registerLazySingleton<GetLivrosDatasource>(
     () => GetLivrosFirebaseDatasourceImp(),
