@@ -25,7 +25,7 @@ import 'package:livros_app/layers/domain/usecases/categoria_usecase/update_categ
 import 'package:livros_app/layers/domain/usecases/categoria_usecase/update_categoria/update_categoria_usecase_imp.dart';
 import 'package:livros_app/layers/presentation/controllers/categoria_controller.dart';
 
-void livroInject(GetIt getIt) {
+void categoriaInject(GetIt getIt) {
   //datasources
   getIt.registerLazySingleton<CreateCategoriaDatasource>(
     () => CreateCategoriaFirebaseDatasourceImp(),

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:livros_app/core/inject/inject.dart';
-import 'package:livros_app/layers/presentation/ui/pages/livro_page.dart';
+import 'package:livros_app/layers/presentation/ui/pages/categoria_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LivroPage(),
+      home: const CategoriaPage(),
     );
   }
 }
