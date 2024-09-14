@@ -1,5 +1,5 @@
 import 'package:livros_app/layers/data/datasources/categoria_datasources/delete_categoria_datasource.dart';
-import 'package:livros_app/layers/domain/repositories/categoria_repositories/delete_categoria_repository.dart';
+import 'package:livros_app/layers/domain/repositories/categoria_repositories/categoria_repository.dart';
 
 class DeleteCategoriaRepositoryImp implements DeleteCategoriaRepository {
   final DeleteCategoriaDatasource _deleteCategoriaDatasource;
