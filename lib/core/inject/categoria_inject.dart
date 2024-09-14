@@ -15,14 +15,8 @@ import 'package:livros_app/layers/domain/repositories/categoria_repositories/cre
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/delete_categoria_repository.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/get_categorias_repository.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/update_categoria_repository.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/create_categoria/create_categoria_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/create_categoria/create_categoria_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/delete_categoria/delete_categoria_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/delete_categoria/delete_categoria_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/get_categorias/get_categorias_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/get_categorias/get_categorias_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/update_categoria/update_categoria_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/update_categoria/update_categoria_usecase_imp.dart';
+import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase_imp.dart';
 import 'package:livros_app/layers/presentation/controllers/categoria_controller.dart';
 
 void categoriaInject(GetIt getIt) {

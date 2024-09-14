@@ -1,8 +1,5 @@
 import 'package:livros_app/layers/domain/entities/categoria_entity.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/create_categoria/create_categoria_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/delete_categoria/delete_categoria_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/get_categorias/get_categorias_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/categoria_usecase/update_categoria/update_categoria_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase.dart';
 
 class CategoriaController {
   final CreateCategoriaUsecase _createCategoriaUsecase;
