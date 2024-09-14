@@ -1,5 +1,5 @@
 import 'package:livros_app/layers/domain/entities/categoria_entity.dart';
-import 'package:livros_app/layers/domain/repositories/categoria_repositories/categoria_repository.dart';
+import 'package:livros_app/layers/domain/repositories/categoria_repository.dart';
 import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase.dart';
 
 class CreateCategoriaUsecaseImp implements CreateCategoriaUsecase {

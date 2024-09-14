@@ -11,7 +11,7 @@ import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_i
 import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/delete_categoria_repository_imp.dart';
 import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/get_categorias_repository_imp.dart';
 import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/update_categoria_repository_imp.dart';
-import 'package:livros_app/layers/domain/repositories/categoria_repositories/categoria_repository.dart';
+import 'package:livros_app/layers/domain/repositories/categoria_repository.dart';
 import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase.dart';
 import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase_imp.dart';
 import 'package:livros_app/layers/presentation/controllers/categoria_controller.dart';

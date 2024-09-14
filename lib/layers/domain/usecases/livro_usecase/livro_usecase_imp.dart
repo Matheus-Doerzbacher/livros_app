@@ -1,9 +1,5 @@
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
-import 'package:livros_app/layers/domain/repositories/livro_repositories/create_livro_repository.dart';
-import 'package:livros_app/layers/domain/repositories/livro_repositories/delete_livro_repository.dart';
-import 'package:livros_app/layers/domain/repositories/livro_repositories/get_livro_by_id_repository.dart';
-import 'package:livros_app/layers/domain/repositories/livro_repositories/get_livros_repository.dart';
-import 'package:livros_app/layers/domain/repositories/livro_repositories/update_livro_repository.dart';
+import 'package:livros_app/layers/domain/repositories/livro_repository.dart';
 import 'package:livros_app/layers/domain/usecases/livro_usecase/livro_usecase.dart';
 
 class CreateLivroUsecaseImp implements CreateLivroUsecase {

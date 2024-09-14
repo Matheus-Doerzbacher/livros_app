@@ -1,6 +1,6 @@
 import 'package:livros_app/layers/data/datasources/emprestimo_datasources/create_emprestimo_datasource.dart';
 import 'package:livros_app/layers/domain/entities/emprestimo_entity.dart';
-import 'package:livros_app/layers/domain/repositories/emprestimo_repositories/create_emprestimo_respository.dart';
+import 'package:livros_app/layers/domain/repositories/emprestimo_respository.dart';
 
 class CreateEmprestimoRepositoryImp implements CreateEmprestimoRepository {
   final CreateEmprestimoDatasource _createEmprestimoDatasource;
