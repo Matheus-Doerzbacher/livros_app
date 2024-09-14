@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/update_categoria_datasource.dart';
+import 'package:livros_app/layers/data/datasources/categoria_datasources/categoria_datasource.dart';
 import 'package:livros_app/layers/domain/entities/categoria_entity.dart';
 
 class UpdateCategoriaFirebaseDatasourceImp

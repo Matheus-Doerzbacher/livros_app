@@ -1,7 +1,4 @@
-import 'package:livros_app/layers/data/datasources/categoria_datasources/create_categoria_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/delete_categoria_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/get_categorias_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/update_categoria_datasource.dart';
+import 'package:livros_app/layers/data/datasources/categoria_datasources/categoria_datasource.dart';
 import 'package:livros_app/layers/domain/entities/categoria_entity.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repository.dart';
 

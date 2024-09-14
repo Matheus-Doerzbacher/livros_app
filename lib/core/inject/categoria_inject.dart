@@ -1,12 +1,9 @@
 import 'package:get_it/get_it.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/create_categoria_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/delete_categoria_datasource.dart';
+import 'package:livros_app/layers/data/datasources/categoria_datasources/categoria_datasource.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/create_categoria_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/delete_categoria_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/get_categorias_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/update_categoria_firebase_datasource_imp.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/get_categorias_datasource.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/update_categoria_datasource.dart';
 import 'package:livros_app/layers/data/repositories_imp/categoria_repository_imp.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repository.dart';
 import 'package:livros_app/layers/domain/usecases/categoria_usecase/categoria_usecase.dart';

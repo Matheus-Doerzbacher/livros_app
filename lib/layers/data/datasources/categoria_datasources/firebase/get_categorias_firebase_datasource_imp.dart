@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:livros_app/layers/data/datasources/categoria_datasources/get_categorias_datasource.dart';
+import 'package:livros_app/layers/data/datasources/categoria_datasources/categoria_datasource.dart';
 import 'package:livros_app/layers/domain/entities/categoria_entity.dart';
 
 class GetCategoriasFirebaseDatasourceImp implements GetCategoriasDatasource {
