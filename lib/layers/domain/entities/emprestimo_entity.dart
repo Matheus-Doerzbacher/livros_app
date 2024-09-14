@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:livros_app/layers/data/datasources/emprestimo_datasources/emprestimo_datasource.dart';
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 
 enum StatusEmprestimo { emprestado, atrasado, devolvido }
@@ -39,10 +40,6 @@ class Emprestimo {
 
 // ################################################################################################
 
-abstract class UpdateEmprestimoDatasource {
-  Future<bool> call(Emprestimo emprestimo);
-}
-
 class UpdateEmprestimoFirebaseDatasourceImp
     implements UpdateEmprestimoDatasource {
   @override
@@ -63,35 +60,5 @@ class UpdateEmprestimoFirebaseDatasourceImp
     } catch (e) {
       return false;
     }
-  }
-}
-
-abstract class UpdateEmprestimoRepository {
-  Future<bool> call(Emprestimo emprestimo);
-}
-
-class UpdateEmprestimoRepositoryImp implements UpdateEmprestimoRepository {
-  final UpdateEmprestimoDatasource _updateEmprestimoDatasource;
-
-  UpdateEmprestimoRepositoryImp(this._updateEmprestimoDatasource);
-
-  @override
-  Future<bool> call(Emprestimo emprestimo) async {
-    return await _updateEmprestimoDatasource(emprestimo);
-  }
-}
-
-abstract class UpdateEmprestimoUsecase {
-  Future<bool> call(Emprestimo emprestimo);
-}
-
-class UpdateEmprestimoUsecaseImp implements UpdateEmprestimoUsecase {
-  final UpdateEmprestimoRepository _updateEmprestimoRepository;
-
-  UpdateEmprestimoUsecaseImp(this._updateEmprestimoRepository);
-
-  @override
-  Future<bool> call(Emprestimo emprestimo) async {
-    return await _updateEmprestimoRepository(emprestimo);
   }
 }

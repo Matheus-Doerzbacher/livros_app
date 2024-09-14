@@ -1,21 +1,21 @@
 import 'package:livros_app/layers/domain/entities/emprestimo_entity.dart';
 
-abstract class CreateEmprestimoRepository {
+abstract class CreateEmprestimoUsecase {
   Future<bool> call(Emprestimo emprestimo);
 }
 
-abstract class GetEmprestimoByIdRepository {
+abstract class GetEmprestimoByIdUsecase {
   Future<Emprestimo> call(String idEmprestimo);
 }
 
-abstract class GetEmprestimosRepository {
+abstract class GetEmprestimosUsecase {
   Future<List<Emprestimo>> call();
 }
 
-abstract class DeleteEmprestimoRepository {
+abstract class DeleteEmprestimoUsecase {
   Future<bool> call(String idEmprestimo);
 }
 
-abstract class UpdateEmprestimoRepository {
+abstract class UpdateEmprestimoUsecase {
   Future<bool> call(Emprestimo emprestimo);
 }
