@@ -1,9 +1,5 @@
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/create_livro/create_livro_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/delete_livro/delete_livro_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livro_by_id/get_livro_by_id_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_livros_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/update_livro/update_livro_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/livro_usecase/livro_usecase.dart';
 
 class LivroController {
   final GetLivroByIdUsecase _getLivroByIdUsecase;

@@ -19,16 +19,8 @@ import 'package:livros_app/layers/domain/repositories/livro_repositories/delete_
 import 'package:livros_app/layers/domain/repositories/livro_repositories/get_livro_by_id_repository.dart';
 import 'package:livros_app/layers/domain/repositories/livro_repositories/get_livros_repository.dart';
 import 'package:livros_app/layers/domain/repositories/livro_repositories/update_livro_repository.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/create_livro/create_livro_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/create_livro/create_livro_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/delete_livro/delete_livro_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/delete_livro/delete_livro_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livro_by_id/get_livro_by_id_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livro_by_id/get_livro_by_id_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_livros_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_livros_usecase_imp.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/update_livro/update_livro_usecase.dart';
-import 'package:livros_app/layers/domain/usecases/livro_usecase/update_livro/update_livro_usecase_imp.dart';
+import 'package:livros_app/layers/domain/usecases/livro_usecase/livro_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/livro_usecase/livro_usecase_imp.dart';
 import 'package:livros_app/layers/presentation/controllers/livro_controller.dart';
 
 void livroInject(GetIt getIt) {

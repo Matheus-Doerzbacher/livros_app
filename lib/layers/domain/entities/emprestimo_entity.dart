@@ -37,61 +37,61 @@ class Emprestimo {
   }
 }
 
-// abstract class CreateEmprestimoDatasource {
-//   Future<bool> call(Emprestimo emprestimo);
-// }
+// ################################################################################################
 
-// class CreateEmprestimoFirebaseDatasourceImp
-//     implements CreateEmprestimoDatasource {
-//   @override
-//   Future<bool> call(Emprestimo emprestimo) async {
-//     try {
-//       final firestore = FirebaseFirestore.instance;
-//       final emprestimoRef = firestore.collection('emprestimos').doc();
+abstract class UpdateEmprestimoDatasource {
+  Future<bool> call(Emprestimo emprestimo);
+}
 
-//       await emprestimoRef.set({
-//         'destinatario': emprestimo.destinatario,
-//         'dataEmprestimo': emprestimo.dataEmprestimo,
-//         'dataDevolucao': emprestimo.dataDevolucao,
-//         'dias': emprestimo.dias,
-//         'status': emprestimo.status.toString(),
-//       });
+class UpdateEmprestimoFirebaseDatasourceImp
+    implements UpdateEmprestimoDatasource {
+  @override
+  Future<bool> call(Emprestimo emprestimo) async {
+    try {
+      final firestore = FirebaseFirestore.instance;
+      final emprestimoRef = firestore.collection('emprestimos').doc();
 
-//       return true;
-//     } catch (e) {
-//       return false;
-//     }
-//   }
-// }
+      await emprestimoRef.set({
+        'destinatario': emprestimo.destinatario,
+        'dataEmprestimo': emprestimo.dataEmprestimo,
+        'dataDevolucao': emprestimo.dataDevolucao,
+        'dias': emprestimo.dias,
+        'status': emprestimo.status.toString(),
+      });
 
-// abstract class CreateEmprestimoRepository {
-//   Future<bool> call(Emprestimo emprestimo);
-// }
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+}
 
-// class CreateEmprestimoRepositoryImp implements CreateEmprestimoRepository {
-//   final CreateEmprestimoDatasource _createEmprestimoDatasource;
+abstract class UpdateEmprestimoRepository {
+  Future<bool> call(Emprestimo emprestimo);
+}
 
-//   CreateEmprestimoRepositoryImp(this._createEmprestimoDatasource);
+class UpdateEmprestimoRepositoryImp implements UpdateEmprestimoRepository {
+  final UpdateEmprestimoDatasource _updateEmprestimoDatasource;
 
-//   @override
-//   Future<bool> call(Emprestimo emprestimo) async {
-//     return await _createEmprestimoDatasource(emprestimo);
-//   }
-// }
+  UpdateEmprestimoRepositoryImp(this._updateEmprestimoDatasource);
 
-// abstract class CreateEmprestimoUsecase {
-//   Future<bool> call(Emprestimo emprestimo);
-// }
+  @override
+  Future<bool> call(Emprestimo emprestimo) async {
+    return await _updateEmprestimoDatasource(emprestimo);
+  }
+}
 
-// class CreateEmprestimoUsecaseImp implements CreateEmprestimoUsecase {
-//   final CreateEmprestimoRepository _createEmprestimoRepository;
+abstract class UpdateEmprestimoUsecase {
+  Future<bool> call(Emprestimo emprestimo);
+}
 
-//   CreateEmprestimoUsecaseImp(this._createEmprestimoRepository);
+class UpdateEmprestimoUsecaseImp implements UpdateEmprestimoUsecase {
+  final UpdateEmprestimoRepository _updateEmprestimoRepository;
 
-//   @override
-//   Future<bool> call(Emprestimo emprestimo) async {
-//     return await _createEmprestimoRepository(emprestimo);
-//   }
-// }
+  UpdateEmprestimoUsecaseImp(this._updateEmprestimoRepository);
 
-// -------------------------------------------------------------
+  @override
+  Future<bool> call(Emprestimo emprestimo) async {
+    return await _updateEmprestimoRepository(emprestimo);
+  }
+}
