@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:livros_app/layers/data/datasources/livro_datasources/get_livros_datasource.dart';
+import 'package:livros_app/layers/data/datasources/livro_datasources/livro_datasource.dart';
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 
 class GetLivrosFirebaseDatasourceImp implements GetLivrosDatasource {

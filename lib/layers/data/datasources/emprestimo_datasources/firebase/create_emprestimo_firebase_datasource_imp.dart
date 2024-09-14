@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:livros_app/layers/data/datasources/emprestimo_datasources/create_emprestimo_datasource.dart';
+import 'package:livros_app/layers/data/datasources/emprestimo_datasources/emprestimo_datasource.dart';
 import 'package:livros_app/layers/domain/entities/emprestimo_entity.dart';
 
 class CreateEmprestimoFirebaseDatasourceImp
