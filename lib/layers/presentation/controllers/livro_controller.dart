@@ -1,17 +1,23 @@
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 import 'package:livros_app/layers/domain/usecases/livro_usecase/create_livro/create_livro_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/livro_usecase/delete_livro/delete_livro_usecase.dart';
 import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livro_by_id/get_livro_by_id_usecase.dart';
 import 'package:livros_app/layers/domain/usecases/livro_usecase/get_livros/get_livros_usecase.dart';
+import 'package:livros_app/layers/domain/usecases/livro_usecase/update_livro/update_livro_usecase.dart';
 
 class LivroController {
   final GetLivroByIdUsecase _getLivroByIdUsecase;
   final GetLivrosUsecase _getLivrosUsecase;
   final CreateLivroUsecase _createLivroUsecase;
+  final UpdateLivroUsecase _updateLivroUsecase;
+  final DeleteLivroUsecase _deleteLivroUsecase;
 
   LivroController(
     this._getLivroByIdUsecase,
     this._getLivrosUsecase,
     this._createLivroUsecase,
+    this._updateLivroUsecase,
+    this._deleteLivroUsecase,
   ) {
     getLivros();
   }
@@ -28,5 +34,13 @@ class LivroController {
 
   createLivro(Livro livro) async {
     return await _createLivroUsecase(livro);
+  }
+
+  updateLivro(Livro livro) async {
+    return await _updateLivroUsecase(livro);
+  }
+
+  deleteLivro(String idLivro) async {
+    return await _deleteLivroUsecase(idLivro);
   }
 }
