@@ -28,10 +28,10 @@ class GetEmprestimoByIdRepositoryImp implements GetEmprestimoByIdRepository {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class GetEmorestimosRepositoryImp implements GetEmprestimosRepository {
+class GetEmprestimosRepositoryImp implements GetEmprestimosRepository {
   final GetEmprestimosDatasource _getEmprestimosDatasource;
 
-  GetEmorestimosRepositoryImp(this._getEmprestimosDatasource);
+  GetEmprestimosRepositoryImp(this._getEmprestimosDatasource);
 
   @override
   Future<List<Emprestimo>> call() async {
