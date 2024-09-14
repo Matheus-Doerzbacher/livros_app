@@ -9,11 +9,11 @@ import 'package:livros_app/layers/data/datasources/livro_datasources/firebase/up
 import 'package:livros_app/layers/data/datasources/livro_datasources/get_livro_by_id_datasource.dart';
 import 'package:livros_app/layers/data/datasources/livro_datasources/get_livros_datasource.dart';
 import 'package:livros_app/layers/data/datasources/livro_datasources/update_livro_datasource.dart';
-import 'package:livros_app/layers/data/repositories/livro_repositories_imp/create_livro_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/livro_repositories_imp/delete_livro_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/livro_repositories_imp/get_livro_by_id_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/livro_repositories_imp/get_livros_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/livro_repositories_imp/update_livro_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/livro_repositories_imp/create_livro_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/livro_repositories_imp/delete_livro_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/livro_repositories_imp/get_livro_by_id_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/livro_repositories_imp/get_livros_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/livro_repositories_imp/update_livro_repository_imp.dart';
 import 'package:livros_app/layers/domain/repositories/livro_repositories/create_livro_repository.dart';
 import 'package:livros_app/layers/domain/repositories/livro_repositories/delete_livro_repository.dart';
 import 'package:livros_app/layers/domain/repositories/livro_repositories/get_livro_by_id_repository.dart';

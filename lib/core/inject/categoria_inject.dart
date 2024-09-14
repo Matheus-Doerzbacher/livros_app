@@ -7,10 +7,10 @@ import 'package:livros_app/layers/data/datasources/categoria_datasources/firebas
 import 'package:livros_app/layers/data/datasources/categoria_datasources/firebase/update_categoria_firebase_datasource_imp.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/get_categorias_datasource.dart';
 import 'package:livros_app/layers/data/datasources/categoria_datasources/update_categoria_datasource.dart';
-import 'package:livros_app/layers/data/repositories/categoria_repositories_imp/create_categoria_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/categoria_repositories_imp/delete_categoria_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/categoria_repositories_imp/get_categorias_repository_imp.dart';
-import 'package:livros_app/layers/data/repositories/categoria_repositories_imp/update_categoria_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/create_categoria_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/delete_categoria_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/get_categorias_repository_imp.dart';
+import 'package:livros_app/layers/data/repositories_imp/categoria_repositories_imp/update_categoria_repository_imp.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/create_categoria_repository.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/delete_categoria_repository.dart';
 import 'package:livros_app/layers/domain/repositories/categoria_repositories/get_categorias_repository.dart';
