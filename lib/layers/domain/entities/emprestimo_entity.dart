@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:livros_app/layers/data/datasources/emprestimo_datasources/emprestimo_datasource.dart';
 import 'package:livros_app/layers/domain/entities/livro_entity.dart';
 
 enum StatusEmprestimo { emprestado, atrasado, devolvido }
@@ -11,6 +10,31 @@ class Emprestimo {
   final DateTime? dataDevolucao;
   final int dias;
   StatusEmprestimo status;
+
+  factory Emprestimo.fromJson(Map<String, dynamic> json) {
+    return Emprestimo(
+      livro: Livro.fromJson(json['livro']),
+      destinatario: json['destinatario'],
+      dataEmprestimo: (json['dataEmprestimo'] as Timestamp).toDate(),
+      dataDevolucao: (json['dataDevolucao'] as Timestamp?)?.toDate(),
+      dias: json['dias'],
+      status: StatusEmprestimo.values.firstWhere(
+        (e) => e.toString() == 'StatusEmprestimo.${json['status']}',
+        orElse: () => StatusEmprestimo.emprestado,
+      ),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'livro': livro.toJson(),
+      'destinatario': destinatario,
+      'dataEmprestimo': dataEmprestimo,
+      'dataDevolucao': dataDevolucao,
+      'dias': dias,
+      'status': status.toString().split('.').last,
+    };
+  }
 
   Emprestimo({
     required this.livro,
@@ -34,31 +58,6 @@ class Emprestimo {
       status = StatusEmprestimo.atrasado;
     } else {
       status = StatusEmprestimo.emprestado;
-    }
-  }
-}
-
-// ################################################################################################
-
-class UpdateEmprestimoFirebaseDatasourceImp
-    implements UpdateEmprestimoDatasource {
-  @override
-  Future<bool> call(Emprestimo emprestimo) async {
-    try {
-      final firestore = FirebaseFirestore.instance;
-      final emprestimoRef = firestore.collection('emprestimos').doc();
-
-      await emprestimoRef.set({
-        'destinatario': emprestimo.destinatario,
-        'dataEmprestimo': emprestimo.dataEmprestimo,
-        'dataDevolucao': emprestimo.dataDevolucao,
-        'dias': emprestimo.dias,
-        'status': emprestimo.status.toString(),
-      });
-
-      return true;
-    } catch (e) {
-      return false;
     }
   }
 }
