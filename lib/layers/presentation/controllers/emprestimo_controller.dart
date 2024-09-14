@@ -28,7 +28,7 @@ class EmprestimoController {
     emprestimos = await _getEmprestimosUsecase();
   }
 
-  createEmprestimo(Emprestimo emprestimo) async {
+  Future<bool> createEmprestimo(Emprestimo emprestimo) async {
     return await _createEmprestimoUsecase(emprestimo);
   }
 
