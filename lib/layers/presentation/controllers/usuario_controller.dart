@@ -1,14 +1,29 @@
-import 'package:livros_app/layers/domain/entities/usuario_entity.dart';
-import 'package:livros_app/layers/domain/usecases/usuario_usecase/usuario_usecase.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class UsuarioController {
-  final LoginUsuarioGoogleUsecase _loginUsuarioGoogleUsecase;
+  static User? user = FirebaseAuth.instance.currentUser;
+  static bool isLoading = false;
 
-  UsuarioController(this._loginUsuarioGoogleUsecase);
+  static Future<User?> loginWithGoogle() async {
+    final googleAcount = await GoogleSignIn().signIn();
 
-  Usuario? usuario;
+    final googleAuth = await googleAcount?.authentication;
 
-  getUsuario() async {
-    usuario = await _loginUsuarioGoogleUsecase();
+    final credentials = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+
+    final userCredential = await FirebaseAuth.instance.signInWithCredential(
+      credentials,
+    );
+
+    return userCredential.user;
+  }
+
+  static Future<void> signOut() async {
+    await FirebaseAuth.instance.signOut();
+    await GoogleSignIn().signOut();
   }
 }
